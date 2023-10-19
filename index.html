@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>NewsApp</title>
+</head>
+<body class="bg-stone-100 w-full h-[100vh]">
+    <div class="flex flex-col w-full items-center h-full">
+
+        <header class="bg-stone-200 sticky top-0 p-4 text-right w-full max-w-full" style="
+        z-index: 998;">
+
+            <div class="flex flex-col lg:flex-row justify-between items-center w-full max-w-full">
+                <div class="w-fit">
+                    <h1 class="font-bold text-stone-800 text-3xl">NewsApp</h1>
+                </div>
+                <!-- Login and Register Buttons -->
+                <div class="options-container p-0 z-4 relative flex justify-center lg:justify-end flex-wrap">
+                </div>
+
+                <div class="flex gap-2" id="userbuttons">
+                    <button id="loginButton" onclick="showLoginForm()"
+                        class="bg-red-500 text-white px-4 py-2 rounded">Log in</button>
+                    <button id="registerButton" onclick="showRegistrationForm()"
+                        class="bg-gray-500 text-white px-4 py-2 rounded">Register</button>
+                </div>
+            </div>
+
+        </header>
+    <div class="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-white" id="popupBackdrop"
+    style="display: none; z-index: 999;">
+    <div class="bg-white p-8 w-96 h-96 ">
+        <button
+            class="absolute top-8 right-16 hover:text-gray-900 bg-blue-500 bg-black-500 text-white p-4 text-xl rounded-lg shadow-lg"
+            onclick="hidePopup()">Close X</button>
+        <div id="popupContent">
+        </div>
+    </div>
+</div>
+
+
+<div
+    class="container flex justify-center grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8 h-full relative z-0">
+</div>
+</div>
+    <script src="app.js"></script> 
+</body>
+</html>
